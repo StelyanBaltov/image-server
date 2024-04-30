@@ -58,6 +58,7 @@ app.get('/api/images', (req: Request, res: Response) => {
 app.get('/api/images/:id', (req: Request, res: Response) => {
   const { id } = req.params;
   const image = images.find(img => img.id.toString() === id);
+  
   if (image) {
     res.json(image);
   } else {
